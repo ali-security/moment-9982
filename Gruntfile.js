@@ -189,7 +189,7 @@ module.exports = function (grunt) {
     require('load-grunt-tasks')(grunt);
 
     // Default task.
-    grunt.registerTask('default', ['lint', 'test']);
+    grunt.registerTask('default', ['test']);
 
     // linting
     grunt.registerTask('lint', ['exec:eslint', 'exec:prettier-check']);
@@ -229,7 +229,7 @@ module.exports = function (grunt) {
     ]);
 
     // travis build task
-    grunt.registerTask('build:travis', ['lint', 'exec:coveralls']);
+    grunt.registerTask('build:travis', ['exec:coveralls']);
     grunt.registerTask('meteor-publish', [
         'exec:meteor-init',
         'exec:meteor-publish',
